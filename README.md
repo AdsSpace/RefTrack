@@ -1,4 +1,4 @@
-# RefTrack
+# RefTrack - Referral Management System
 
 ## Basic Features 
 
