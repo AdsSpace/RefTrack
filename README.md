@@ -7,7 +7,7 @@
 
 
 ## Current Tasks 
-1. Homepage
+1. homepage - display openings, recently posted jobs, etc
 2. user login/register
 3. user can search, sort, filter open positions
 4. user can post, edit and delete their job opennings 
