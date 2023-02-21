@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "1. Users Management\r 2. Referral Management",
   "main": "server.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write ./**/*.{js,jsx,ts,tsx,css,md,json}",
@@ -15,6 +15,8 @@
   "author": "AdsSpace",
   "license": "GPL-3",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "express": "^4.18.2"
   },
   "devDependencies": {
@@ -25,6 +27,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.0",
     "lint-staged": "^13.0.4",
+    "nodemon": "^2.0.20",
     "prettier": "^2.8.0"
   }
 }
