@@ -1,9 +1,15 @@
+require('dotenv').config();
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const mongoose = require('mongoose');
+
 const corsOptions = require('./config/corsOptions');
+const connectDb = require('./config/dbConn');
 
 const app = express();
+
+connectDb();
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -15,6 +21,12 @@ app.use(cookieParser());
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`server listening on port ${PORT}`);
+mongoose.connection.once('open', () => {
+  app.listen(PORT, () => {
+    console.log(`server listening on port ${PORT}`);
+  });
+});
+
+mongoose.connection.once('error', (error) => {
+  console.log(error);
 });
