@@ -20,3 +20,7 @@
 
 MERN - MongoDB, Express.js, React.js and Node.js
 Cloud Deployment Server - Heroku
+
+## Local development
+
+Please add .env file with your environment variables. You can refer .env.template for mock key value pair.
